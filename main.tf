@@ -1,0 +1,13 @@
+provider "aws" {
+  region = var.region
+  
+}
+
+resource "aws_instance" "saikiran" {
+  ami = var.AmazonLinuxImage
+  instance_type = var.instance_type
+  tags = {
+    Name = var.instance_name
+  }
+  
+}
